@@ -792,6 +792,10 @@ img {
         align-items: center;
         margin-left: 130px;
     }
+    
+    #back5 {
+        display: none;
+    }
 
     #botonMano {
         margin-left: 45px;
