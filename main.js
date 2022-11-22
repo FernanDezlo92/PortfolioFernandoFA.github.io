@@ -36,7 +36,7 @@ btnswitch.addEventListener('click', () => {
 
 /* Para el typing effect*/
 
-if (screen.width > 850) {
+if (screen.width > 300) {
     const text = document.querySelector('.second-text');
     const textLoad = () => {
         setTimeout(() => {
