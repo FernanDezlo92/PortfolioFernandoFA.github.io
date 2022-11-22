@@ -74,46 +74,49 @@ imagen3.addEventListener('click', () => {
 
 /*Efecto ticket*/ /*el aparecer y desaparecer el back se puede hacer con un hover en el css*/
 
-let back1 = document.querySelector('#back5');
+if (screen.width > 300){
+    
+    let back1 = document.querySelector('#back5');
 
-const $ = selector => document.querySelector(selector);
+    const $ = selector => document.querySelector(selector);
 
-const wrapper = $('.pruebaTicket2');
-const ticket = $('.pruebaticket3');
+    const wrapper = $('.pruebaTicket2');
+    const ticket = $('.pruebaticket3');
 
-const { width, height } = wrapper.getBoundingClientRect();
+    const { width, height } = wrapper.getBoundingClientRect();
 
-const halfHeight = height / 2;
-const halfWidth = width / 2;
-
-
-wrapper.addEventListener('mousemove', event => {
-    ticket.style.transition = 'none';
+    const halfHeight = height / 2;
+    const halfWidth = width / 2;
 
 
-    const { offsetX, offsetY } = event;
+    wrapper.addEventListener('mousemove', event => {
+        ticket.style.transition = 'none';
 
 
-    back1.removeAttribute("hidden");
+        const { offsetX, offsetY } = event;
 
 
-    const rotationX = ((offsetX - halfWidth) / halfWidth) * 10;
-    const rotationY = ((offsetY - halfHeight) / halfHeight) * 10;
-
-    ticket.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`
+        back1.removeAttribute("hidden");
 
 
-});
+        const rotationX = ((offsetX - halfWidth) / halfWidth) * 10;
+        const rotationY = ((offsetY - halfHeight) / halfHeight) * 10;
 
-wrapper.addEventListener('mouseleave', () => {
-    ticket.style.transform = `rotateX(0deg) rotateY(0deg)`
+        ticket.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`
 
-    ticket.style.transition = 'all 0.5s ease-in-out';
 
-    back1.setAttribute("hidden", "hidden");
+    });
 
-});
+    wrapper.addEventListener('mouseleave', () => {
+        ticket.style.transform = `rotateX(0deg) rotateY(0deg)`
 
+        ticket.style.transition = 'all 0.5s ease-in-out';
+
+        back1.setAttribute("hidden", "hidden");
+
+    });
+
+}
 
 /*Desaparecer mano*/
 
