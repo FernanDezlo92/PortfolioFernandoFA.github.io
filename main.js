@@ -64,11 +64,11 @@ imagen1.addEventListener('click', () => {
 });
 
 imagen2.addEventListener('click', () => {
-    window.open('http://127.0.0.1:5501/index.html');
+    window.open('https://fernandezlo92.github.io/PortfolioFernandoFA.github.io/', '_blank');
 });
 
 imagen3.addEventListener('click', () => {
-    window.open('https://www.youtube.com/channel/UCtlAu33gvAeILvGO_QBdnPg');
+    window.open('https://www.youtube.com/channel/UCtlAu33gvAeILvGO_QBdnPg', '_blank');
 });
 
 
