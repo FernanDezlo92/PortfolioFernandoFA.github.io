@@ -2,7 +2,7 @@
 
 const fecha = document.querySelector('#fecha');
 const FECHA = new Date();
-fecha.innerHTML = FECHA.toLocaleDateString('es-ES', { weekday: 'long', month: 'short', day: 'numeric' })
+fecha.innerHTML = FECHA.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })
 
 console.log(window.scrollY);
 
